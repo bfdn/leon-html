@@ -1,0 +1,108 @@
+.contact {
+    grid-column: full-start / full-end;
+    background-color: #fafafa;
+    padding-top: pxtorem(90px);
+    padding-bottom: pxtorem(90px);
+    padding-left: pxtorem(10px);
+    padding-right: pxtorem(10px);
+
+
+    display: grid;
+    //grid-template-rows: repeat(2, minmax(min-content, max-content));
+    align-content: space-evenly;
+
+    @include mq('large') {
+        //grid-template-columns: minmax(15rem, 23rem) 1fr minmax(15rem, 23rem);
+        padding-left: 24rem;
+        padding-right: 24rem;
+    }
+
+    &__content {
+        //display: grid;
+        //grid-column: col-start 1 / col-end -1;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-family: $heading-font;
+        //font-size: pxtorem(161px);
+        font-size: 4rem;
+        color: $gray-color-light;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+
+        @include mq('tablet') {
+            font-size: 6rem;
+        }
+
+        &::after {
+            content: "We are born to create";
+            display: block;
+            font-size: 1rem;
+            color: $three-color;
+            font-weight: 300;
+            text-align: center;
+            transform: translateY(-30px);
+
+            @include mq('tablet') {
+                font-size: pxtorem(25px);
+            }
+        }
+    }
+
+    &__bottom {
+        word-break: break-word;
+        //grid-column: 2/3;
+
+        p:first-child {
+            font-family: $heading-font;
+            color: $secondary-color;
+
+            //font-size: pxtorem(55px);
+            font-size: pxtorem(30px);
+        }
+    }
+
+    &__email {
+        //font-size: pxtorem(50px);
+        font-size: pxtorem(30px);
+        font-family: $heading-font;
+        color: $primary-color;
+        margin-top: pxtorem(30px);
+    }
+
+    &__social {
+        margin-top: pxtorem(30px);
+
+        span {
+            display: block;
+        }
+
+        a {
+            margin-left: 20px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            i {}
+        }
+    }
+}
+
+
+.footer {
+    background-color: $secondary-color;
+    grid-column: full-start / full-end;
+    text-align: center;
+    font-family: $heading-font;
+    line-height: 100px;
+    color: $light-color;
+
+    a {
+        color: $primary-color;
+
+    }
+}

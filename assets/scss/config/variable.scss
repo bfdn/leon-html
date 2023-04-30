@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'WorkSans-Regular';
+    src: url("/assets/fonts/WorkSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url("/assets/fonts/WorkSans-SemiBold.ttf");
+}
+
+
+
+$max-width: 1170px;
+$gutter: 30px;
+
+$text-font: 'WorkSans-Regular', sans-serif;
+$heading-font: 'WorkSans-SemiBold', sans-serif;
+$font-size: 15px;
+
+
+
+// Renkler 
+$primary-color: #10cab7;
+$primary-color-light: #30d1c1;
+
+$secondary-color: #2c4755;
+
+$three-color: #575757;
+$four-color: #f6f6f6;
+
+$light-color: #ffffff;
+$dark-color: #000000;
+$dark-color-light: #1f2021;
+$gray-color: #4d4c4c;
+$gray-color-light: #ebeced;
+
+
+$border-color: #e1e1e1;

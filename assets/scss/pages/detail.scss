@@ -1,0 +1,218 @@
+main.detail {
+    display: grid;
+
+
+    grid-template-rows: pxtovh(90px) pxtovh(460px) minmax(min-content, max-content) minmax(max-content, 1fr) 100px;
+
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [full-end];
+}
+
+@include mq('tablet') {}
+
+@include mq('large') {
+
+
+    main.detail {
+        display: grid;
+
+
+        grid-template-rows: pxtovh(90px) pxtovh(460px) minmax(min-content, max-content) minmax(max-content, 1fr) 100px;
+
+        grid-template-columns: [full-start] minmax(19%, 1fr) [center-start] repeat(9, [col-start] minmax(min-content, 10rem)[col-end]) [center-end] minmax(19%, 1fr) [full-end];
+    }
+
+
+}
+
+
+.detail__header {
+    grid-column: full-start / full-end;
+    background-color: #fafafa;
+
+    display: grid;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include mq('desktop') {
+        padding-left: pxtorem(100px);
+        padding-right: pxtorem(100px);
+    }
+
+    @include mq('large') {
+        padding-left: 16rem;
+        padding-right: 16rem;
+    }
+
+    &-breadcrumb {
+        padding-top: pxtorem(30px);
+        padding-bottom: pxtorem(30px);
+        padding-left: pxtorem(30px);
+        background-color: $light-color;
+
+        @include mq('large') {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+
+        &-title {
+            font-weight: 500;
+            font-size: pxtorem(20px);
+            color: #575757;
+        }
+
+        p {
+            color: $primary-color;
+            font-family: $heading-font;
+            font-size: pxtorem(30px);
+
+            @include mq('large') {
+                font-size: pxtorem(55px);
+            }
+
+        }
+    }
+
+}
+
+.project {
+    grid-column: full-start / full-end;
+
+    display: grid;
+    padding-left: pxtorem(10px);
+    padding-right: pxtorem(10px);
+    margin-top: pxtorem(50px);
+    grid-gap: 2rem;
+    align-items: center;
+
+
+    @include mq('tablet') {
+        grid-template-columns: 1fr 1fr;
+
+        @include mq('tablet') {
+            column-gap: 4rem;
+        }
+    }
+
+    @include mq('large') {
+        grid-column: center-start / center-end;
+    }
+
+    &__content {
+        grid-row: 1/2;
+
+        p:first-child {
+            font-size: pxtorem(20px);
+            font-family: $heading-font;
+            color: #334752;
+        }
+
+        p:last-child {
+            font-weight: 500;
+            color: #575757;
+            margin-top: pxtorem(30px);
+        }
+    }
+
+    &__info {
+        grid-row: 2/3;
+        margin-top: pxtorem(50px);
+        padding: 80px;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+
+        @include mq('tablet') {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            margin-top: 0;
+        }
+
+        &-item {
+            h4 {
+                font-size: pxtorem(20px);
+                font-family: $heading-font;
+                color: #334752;
+            }
+
+            p {
+                font-size: pxtorem(20px);
+                font-weight: 500;
+                color: #575757;
+            }
+
+            &+& {
+                margin-top: pxtorem(30px);
+            }
+        }
+    }
+
+    &__img {
+
+        img {
+            @include fitImg;
+        }
+
+        &+& {}
+    }
+
+    &__text {
+        font-weight: 500;
+        color: #575757;
+
+        @include mq('tablet') {
+            padding: pxtorem(40px) 10px pxtorem(40px) pxtorem(40px);
+        }
+
+    }
+
+    &__big-img {
+        grid-row: 3/4;
+
+        @include mq('tablet') {
+            grid-row: 2/3;
+            grid-column: 1/-1;
+        }
+    }
+
+    &__first-text {
+        grid-row: 4/5;
+
+
+        @include mq('tablet') {
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+    }
+
+    &__first-img {
+        grid-row: 5/6;
+
+        @include mq('tablet') {
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+    }
+
+    &__second-text {
+        grid-row: 7/8;
+
+        @include mq('tablet') {
+            grid-row: 4/5;
+            grid-column: 2/3;
+        }
+    }
+
+    &__second-img {
+        grid-row: 6/7;
+
+        @include mq('tablet') {
+            grid-row: 4/5;
+            grid-column: 1/2;
+        }
+    }
+
+
+}

@@ -1,0 +1,38 @@
+html,
+body {
+    font-family: $text-font;
+    line-height: 1.4;
+    font-size: $font-size;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+
+.container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    height: 3.75rem;
+    padding: 0 2rem;
+    font-size: 1.1rem;
+
+    &__bg-secondary-color {}
+
+    &__bg-light-color {}
+
+    &__light-color {}
+
+    &-plus {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__border {}
+}
